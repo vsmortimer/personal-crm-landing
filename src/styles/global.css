@@ -1,0 +1,26 @@
+/* Personal CRM landing. Tailwind CSS v4: tokens live in tokens.css, no config file. */
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./fonts.css";
+
+@layer base {
+  html { background-color: var(--color-paper); color: var(--color-ink); }
+  /* No -webkit-font-smoothing: antialiased here: the reference mockups render with the default smoothing */
+  body { font-family: var(--font-sans); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+}
+
+@layer components {
+  /* Small uppercase caption: block numbers, "для своих" */
+  .eyebrow { @apply text-eyebrow uppercase text-ink-mute; }
+}
+
+/* Centered content column: 560px on mobile and tablet, 1280px on desktop */
+@utility page-container {
+  @apply mx-auto max-w-mobile px-6 lg:max-w-desktop lg:px-16;
+}
+
+/* Desktop grids: as many columns as fit, each at least 260px wide */
+@utility grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--spacing) * 65), 1fr));
+}

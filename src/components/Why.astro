@@ -1,0 +1,20 @@
+---
+import { why } from "../content/landing";
+---
+
+<section aria-labelledby="why-title">
+  <div class="page-container flex flex-col py-16 lg:py-28">
+    <span aria-hidden="true" class="eyebrow">{why.number}</span>
+    <h2 id="why-title" class="mt-3 font-display text-h2 font-medium lg:mt-4 lg:max-w-190 lg:text-h2-lg">{why.title}</h2>
+    <div class="mt-8 flex flex-col gap-7 lg:mt-16 lg:grid lg:grid-auto-fit lg:gap-12">
+      {
+        why.items.map((item) => (
+          <div class="flex flex-col gap-1.5 lg:gap-3 lg:border-t lg:border-line lg:pt-6">
+            <h3 class="font-display text-h3 font-medium text-accent italic lg:text-h3-lg">{item.title}</h3>
+            <p class="text-body text-ink-soft lg:text-body-lg">{item.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

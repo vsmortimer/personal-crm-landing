@@ -1,0 +1,36 @@
+---
+import { APP_URL, cta } from "../content/landing";
+
+// TODO: click analytics is an open question (design/HANDOFF.md, open question 3); none by default.
+
+interface Props {
+  // hero: sized to its content on desktop; final: full width of its column
+  variant: "hero" | "final";
+  class?: string;
+}
+
+const { variant, class: className } = Astro.props;
+---
+
+<a
+  href={APP_URL}
+  class:list={[
+    "group flex h-14 items-center justify-between rounded-xs bg-ink px-6 text-button font-semibold text-paper transition-colors duration-150 ease-out hover:bg-ink-hover active:bg-ink-hover lg:h-15 lg:px-7 lg:text-button-lg",
+    variant === "hero" && "lg:gap-12 lg:self-start",
+    className,
+  ]}
+>
+  <span>{cta}</span>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.6"
+    aria-hidden="true"
+    class="motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-out motion-safe:group-hover:translate-x-1 group-active:translate-x-0"
+  >
+    <path d="M4 10h12M11 5l5 5-5 5"></path>
+  </svg>
+</a>

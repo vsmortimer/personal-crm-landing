@@ -1,0 +1,16 @@
+---
+import { final } from "../content/landing";
+import AppButton from "./AppButton.astro";
+---
+
+<section aria-labelledby="final-title" class="border-t border-line">
+  <div class="page-container flex flex-col pt-18 pb-16 lg:flex-row lg:flex-wrap lg:items-end lg:gap-16 lg:py-32">
+    <h2 id="final-title" class="font-display text-display-sm font-medium lg:grow-3 lg:basis-140 lg:text-display-lg">
+      {final.title.before}<em class="text-accent italic">{final.title.accentWord}</em>{final.title.after}
+    </h2>
+    <div class="mt-5 flex flex-col lg:mt-0 lg:grow-2 lg:basis-90">
+      <p class="text-lead text-ink-soft lg:text-lead-lg">{final.text}</p>
+      <AppButton variant="final" class="mt-8" />
+    </div>
+  </div>
+</section>

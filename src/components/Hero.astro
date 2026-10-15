@@ -1,0 +1,22 @@
+---
+import { hero } from "../content/landing";
+import AppButton from "./AppButton.astro";
+import ExampleCard from "./ExampleCard.astro";
+
+// overflow-x-clip: the rotated card must never cause horizontal scroll
+---
+
+<section aria-labelledby="hero-title" class="page-container overflow-x-clip pb-16 lg:pb-28">
+  <div class="mt-12 flex flex-col lg:mt-24 lg:flex-row lg:flex-wrap lg:items-center lg:gap-16">
+    <div class="flex min-w-0 flex-col lg:grow-999 lg:basis-140">
+      <h1 id="hero-title" class="font-display text-display font-medium lg:text-display-lg">
+        {hero.title.before}<em class="text-accent italic">{hero.title.accentWord}</em>{hero.title.after}
+      </h1>
+      <p class="mt-6 text-lead text-ink-soft lg:mt-8 lg:max-w-130 lg:text-lead-lg">{hero.subtitle}</p>
+      <AppButton variant="hero" class="mt-8 lg:mt-10" />
+    </div>
+    <div class="mt-10 lg:mt-0 lg:flex lg:grow lg:basis-90 lg:justify-center">
+      <ExampleCard />
+    </div>
+  </div>
+</section>

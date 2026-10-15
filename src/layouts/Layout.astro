@@ -1,0 +1,24 @@
+---
+import "../styles/global.css";
+import { meta } from "../content/landing";
+
+// TODO: og:image and favicon are not in the design yet (design/HANDOFF.md, open question 2).
+// TODO: add <link rel="canonical"> and `site` in astro.config.mjs once the landing domain is known.
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,43 @@
+/* Личная CRM — лендинг. Tailwind CSS v4: токены задаются через @theme, конфиг-файл не нужен. */
+@import "tailwindcss";
+
+/* Шрифты подключаются в Layout.astro через @fontsource (кириллица + латиница), см. HANDOFF.md */
+
+@theme {
+  /* Цвета */
+  --color-paper: #F3EEE5;      /* основной фон */
+  --color-sand: #EAE2D4;       /* фон блока «Как это работает» */
+  --color-ink: #2E2219;        /* основной текст, кнопка, тёмный блок */
+  --color-ink-soft: #5A4A3C;   /* подзаголовки и описания */
+  --color-ink-mute: #6B5A4A;   /* мелкие подписи, номера блоков */
+  --color-accent: #8A5A3B;     /* курсивные акценты, цифры шагов */
+  --color-line: #D9CFC0;       /* линии и рамки на светлом */
+  --color-line-soft: #E6DCCB;  /* линия внутри карточки, кружок с инициалами */
+  --color-line-sand: #CBBDA5;  /* линии на фоне sand; подписи на тёмном */
+  --color-line-dark: #5A4A3C;  /* рамки на тёмном фоне */
+  --color-ink-hover: #1F160F;  /* кнопка при наведении */
+
+  /* Шрифты */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+
+  /* Ширина контента */
+  --container-mobile: 560px;
+  --container-desktop: 1280px;
+}
+
+@layer base {
+  html { background-color: var(--color-paper); color: var(--color-ink); }
+  body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+}
+
+@layer components {
+  /* Мелкая подпись: номер блока, «для своих», метки в карточке */
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ink-mute);
+  }
+}

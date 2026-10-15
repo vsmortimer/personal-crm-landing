@@ -1,0 +1,30 @@
+---
+import { howItWorks } from "../content/landing";
+
+// The <ol> gives the order to screen readers; the big digits are decorative.
+---
+
+<section aria-labelledby="how-title" class="bg-sand">
+  <div class="page-container flex flex-col py-16 lg:py-28">
+    <span aria-hidden="true" class="eyebrow">{howItWorks.number}</span>
+    <h2 id="how-title" class="mt-3 font-display text-h2 font-medium lg:mt-4 lg:text-h2-lg">{howItWorks.title}</h2>
+    <ol class="mt-8 flex flex-col gap-7 lg:mt-16 lg:grid lg:grid-auto-fit lg:gap-12">
+      {
+        howItWorks.steps.map((step, index) => (
+          <li class="flex gap-5 lg:flex-col lg:gap-4 lg:border-t lg:border-line-sand lg:pt-6">
+            <span
+              aria-hidden="true"
+              class="w-7 shrink-0 font-display text-step-num font-medium text-accent lg:w-auto lg:text-step-num-lg"
+            >
+              {index + 1}
+            </span>
+            <div class="flex flex-col gap-1.5 lg:gap-4">
+              <strong class="text-step-title font-semibold lg:text-step-title-lg">{step.title}</strong>
+              <span class="text-body text-ink-soft lg:text-body-lg">{step.text}</span>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

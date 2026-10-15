@@ -1,0 +1,33 @@
+---
+import { hero } from "../content/landing";
+
+const card = hero.exampleCard;
+
+// Illustration only. On mobile it is content-box like the reference, so 280px is the inner width.
+---
+
+<figure
+  aria-label={card.ariaLabel}
+  class="ml-2 box-content flex max-w-70 origin-top-left -rotate-2 flex-col gap-3.5 border border-line p-5 lg:ml-0 lg:box-border lg:w-85 lg:max-w-none lg:origin-center lg:-rotate-3 lg:gap-4.5 lg:p-7"
+>
+  <div class="flex items-center gap-3 lg:gap-3.5">
+    <div
+      aria-hidden="true"
+      class="flex size-11 shrink-0 items-center justify-center rounded-full bg-line-soft font-display text-initials font-medium lg:size-14 lg:text-initials-lg"
+    >
+      {card.initials}
+    </div>
+    <div class="flex flex-col gap-0.5">
+      <span class="text-card-name font-semibold lg:text-card-name-lg">{card.name}</span>
+      <span class="text-small text-ink-mute lg:text-small-lg">{card.who}</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-0.5 text-small lg:gap-1 lg:text-small-lg">
+    <span class="text-label text-ink-mute uppercase">{card.howWeMetLabel}</span>
+    <span>{card.howWeMet}</span>
+  </div>
+  <div class="flex flex-col gap-0.5 border-t border-line-soft pt-3 text-small lg:gap-1 lg:pt-3.5 lg:text-small-lg">
+    <span class="text-label text-ink-mute uppercase">{card.noteDate}</span>
+    <span>{card.note}</span>
+  </div>
+</figure>

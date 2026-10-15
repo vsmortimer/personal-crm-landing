@@ -1,0 +1,125 @@
+/*
+ * Design tokens: the only place for colors, fonts, type sizes and spacing.
+ * Values come from design/HANDOFF.md and design/reference/*.html.
+ */
+@theme {
+  /* Drop Tailwind's default palette: only the colors below exist */
+  --color-*: initial;
+
+  /* Colors */
+  --color-paper: #F3EEE5;      /* page background */
+  --color-sand: #EAE2D4;       /* "How it works" block background */
+  --color-ink: #2E2219;        /* main text, button, dark block */
+  --color-ink-soft: #5A4A3C;   /* subtitles and descriptions */
+  --color-ink-mute: #6B5A4A;   /* small captions, block numbers */
+  --color-accent: #8A5A3B;     /* italic accents, step numbers */
+  --color-line: #D9CFC0;       /* lines and borders on light */
+  --color-line-soft: #E6DCCB;  /* line inside the card, initials circle */
+  --color-line-sand: #CBBDA5;  /* lines on sand; captions on dark */
+  --color-line-dark: #5A4A3C;  /* borders on dark */
+  --color-ink-hover: #1F160F;  /* button hover */
+
+  /* Font families */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+
+  /* Type scale: `name` is mobile, `name-lg` is desktop (>= 1024px) */
+  --text-logo: 22px;
+  --text-logo--line-height: normal;
+  --text-logo--letter-spacing: 0.01em;
+  --text-logo-lg: 26px;
+  --text-logo-lg--line-height: normal;
+  --text-logo-lg--letter-spacing: 0.01em;
+
+  --text-eyebrow: 12px;
+  --text-eyebrow--line-height: normal;
+  --text-eyebrow--letter-spacing: 0.12em;
+
+  --text-label: 11px;
+  --text-label--line-height: normal;
+  --text-label--letter-spacing: 0.1em;
+  --text-label-lg: 12px;
+  --text-label-lg--line-height: normal;
+  --text-label-lg--letter-spacing: 0.1em;
+
+  --text-display: 52px;
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.01em;
+  --text-display-sm: 48px;
+  --text-display-sm--line-height: 1;
+  --text-display-lg: 96px;
+  --text-display-lg--line-height: 0.95;
+  --text-display-lg--letter-spacing: -0.015em;
+
+  --text-h2: 40px;
+  --text-h2--line-height: 1;
+  --text-h2-lg: 64px;
+  --text-h2-lg--line-height: 1;
+
+  --text-h3: 26px;
+  --text-h3--line-height: normal;
+  --text-h3-lg: 34px;
+  --text-h3-lg--line-height: normal;
+
+  --text-quote: 24px;
+  --text-quote--line-height: 1.2;
+  --text-quote-lg: 32px;
+  --text-quote-lg--line-height: 1.2;
+
+  --text-step-num: 48px;
+  --text-step-num--line-height: 0.85;
+  --text-step-num-lg: 88px;
+  --text-step-num-lg--line-height: 0.8;
+
+  --text-step-title: 17px;
+  --text-step-title--line-height: normal;
+  --text-step-title-lg: 20px;
+  --text-step-title-lg--line-height: normal;
+
+  --text-lead: 16px;
+  --text-lead--line-height: 1.5;
+  --text-lead-lg: 19px;
+  --text-lead-lg--line-height: 1.55;
+
+  --text-body: 15px;
+  --text-body--line-height: 1.5;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 1.55;
+
+  --text-field: 15px;
+  --text-field--line-height: 1.45;
+  --text-field-lg: 17px;
+  --text-field-lg--line-height: 1.5;
+
+  --text-button: 16px;
+  --text-button--line-height: normal;
+  --text-button-lg: 17px;
+  --text-button-lg--line-height: normal;
+
+  --text-card-name: 16px;
+  --text-card-name--line-height: normal;
+  --text-card-name-lg: 18px;
+  --text-card-name-lg--line-height: normal;
+
+  --text-initials: 20px;
+  --text-initials--line-height: normal;
+  --text-initials-lg: 24px;
+  --text-initials-lg--line-height: normal;
+
+  --text-small: 13px;
+  --text-small--line-height: normal;
+  --text-small-lg: 14px;
+  --text-small-lg--line-height: normal;
+
+  --text-footer-logo: 18px;
+  --text-footer-logo--line-height: normal;
+  --text-footer-logo-lg: 22px;
+  --text-footer-logo-lg--line-height: normal;
+
+  /* Spacing: every margin, padding, gap and size is a multiple of this step (p-6 = 24px) */
+  --spacing: 4px;
+
+  /* Content width */
+  --container-mobile: 560px;
+  --container-desktop: 1280px;
+}
